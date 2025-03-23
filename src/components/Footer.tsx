@@ -1,7 +1,6 @@
-
 import React from "react";
 import { Button } from "./Button";
-import { Mail, Github, Linkedin, FileText, Power, Jira, Stripe } from "lucide-react";
+import { Mail, Github, Linkedin, FileText, Power } from "lucide-react";
 
 const Footer = () => {
   return (

@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react";
 import { 
   ChartBar, 
   FileSpreadsheet, 
-  Buildings, 
+  Building, 
   BarChart4, 
   BadgeCheck 
 } from "lucide-react";
