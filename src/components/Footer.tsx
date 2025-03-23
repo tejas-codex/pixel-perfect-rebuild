@@ -1,7 +1,6 @@
-
 import React from "react";
 import { Button } from "./Button";
-import { Mail, GitHub, Twitter, Instagram, Coffee } from "lucide-react";
+import { Mail, Github, Twitter, Instagram, Coffee } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -14,7 +13,7 @@ const Footer = () => {
               Designer & developer crafting thoughtful digital experiences that matter.
             </p>
             <div className="flex space-x-4">
-              <SocialLink href="#" icon={<GitHub className="h-4 w-4" />} label="GitHub" />
+              <SocialLink href="#" icon={<Github className="h-4 w-4" />} label="GitHub" />
               <SocialLink href="#" icon={<Twitter className="h-4 w-4" />} label="Twitter" />
               <SocialLink href="#" icon={<Instagram className="h-4 w-4" />} label="Instagram" />
             </div>
