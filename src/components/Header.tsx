@@ -88,6 +88,7 @@ const Header = () => {
             "fixed inset-0 bg-white z-40 transform transition-transform duration-300 ease-in-out md:hidden",
             mobileMenuOpen ? "translate-y-0" : "translate-y-[-100%]"
           )}
+          style={{ height: '100vh', overflowY: 'auto' }}
         >
           <div className="container mx-auto px-4 py-8 flex flex-col space-y-6 pt-20">
             <div className="flex flex-col space-y-0">
