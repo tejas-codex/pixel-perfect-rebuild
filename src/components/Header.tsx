@@ -49,19 +49,19 @@ const Header = () => {
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
         >
-          {mobileMenuOpen ? <X /> : <Menu />}
+          {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
       
       {/* Mobile Navigation */}
       <div 
         className={cn(
-          "md:hidden fixed inset-0 bg-white z-40 transform transition-transform duration-300 ease-in-out pt-20",
+          "fixed inset-0 bg-white z-40 transform transition-transform duration-300 ease-in-out pt-20 md:hidden",
           mobileMenuOpen ? "translate-y-0" : "translate-y-[-100%]"
         )}
       >
         <div className="container mx-auto px-4 py-8 flex flex-col space-y-6">
-          <div className="flex flex-col space-y-6 text-xl">
+          <div className="flex flex-col space-y-6">
             <NavLinks mobile onClose={() => setMobileMenuOpen(false)} />
           </div>
           <Button className="w-full mt-4" hasArrow>
@@ -101,7 +101,9 @@ const NavLinks = ({ mobile, onClose }: NavLinksProps) => {
           onClick={onClose}
           className={cn(
             "font-medium transition-colors hover:text-primary",
-            mobile ? "py-2 text-lg" : "text-sm"
+            mobile 
+              ? "py-3 text-lg border-b border-gray-100 w-full block" 
+              : "text-sm"
           )}
         >
           {link.label}
