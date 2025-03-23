@@ -1,6 +1,7 @@
+
 import React from "react";
 import { Button } from "./Button";
-import { Mail, Github, Twitter, Instagram, Coffee } from "lucide-react";
+import { Mail, Github, Linkedin, FileText, Power, Jira, Stripe } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -8,19 +9,19 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <h3 className="text-lg font-bold mb-4">Louis Nguyen</h3>
+            <h3 className="text-lg font-bold mb-4">Tejas Shrivastav</h3>
             <p className="text-muted-foreground mb-4">
-              Designer & developer crafting thoughtful digital experiences that matter.
+              Financial Operations & Analytics Expert driving efficiency with data & automation.
             </p>
             <div className="flex space-x-4">
-              <SocialLink href="#" icon={<Github className="h-4 w-4" />} label="GitHub" />
-              <SocialLink href="#" icon={<Twitter className="h-4 w-4" />} label="Twitter" />
-              <SocialLink href="#" icon={<Instagram className="h-4 w-4" />} label="Instagram" />
+              <SocialLink href="https://github.com/" icon={<Github className="h-4 w-4" />} label="GitHub" />
+              <SocialLink href="https://linkedin.com/" icon={<Linkedin className="h-4 w-4" />} label="LinkedIn" />
+              <SocialLink href="mailto:hello@example.com" icon={<Mail className="h-4 w-4" />} label="Email" />
             </div>
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-4">Links</h3>
+            <h3 className="text-lg font-bold mb-4">Navigation</h3>
             <ul className="space-y-2">
               <FooterLink href="#" label="Home" />
               <FooterLink href="#about" label="About" />
@@ -31,40 +32,42 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-4">Resources</h3>
+            <h3 className="text-lg font-bold mb-4">Expertise</h3>
             <ul className="space-y-2">
-              <FooterLink href="#" label="Case Studies" />
-              <FooterLink href="#" label="Process" />
-              <FooterLink href="#" label="Articles" />
-              <FooterLink href="#" label="Inspiration" />
-              <FooterLink href="#" label="Tools" />
+              <FooterLink href="#" label="Financial Operations" />
+              <FooterLink href="#" label="SaaS Billing" />
+              <FooterLink href="#" label="Data Analytics" />
+              <FooterLink href="#" label="Process Automation" />
+              <FooterLink href="#" label="Compliance" />
             </ul>
           </div>
           
           <div id="contact">
             <h3 className="text-lg font-bold mb-4">Get in Touch</h3>
             <p className="text-muted-foreground mb-4">
-              Have a project in mind or just want to say hello?
+              Looking for financial operations expertise or want to discuss a project?
             </p>
             <Button variant="default" className="mb-3 w-full sm:w-auto" hasArrow>
-              Let's Chat
+              Schedule a Call
             </Button>
             <a 
-              href="mailto:hello@example.com" 
+              href="mailto:tejas@example.com" 
               className="flex items-center text-sm text-muted-foreground hover:text-primary"
             >
-              <Mail className="h-4 w-4 mr-2" /> hello@example.com
+              <Mail className="h-4 w-4 mr-2" /> tejas@example.com
             </a>
           </div>
         </div>
         
         <div className="border-t border-border pt-8 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground mb-4 sm:mb-0">
-            © {new Date().getFullYear()} Louis Nguyen. All rights reserved.
+            © {new Date().getFullYear()} Tejas Shrivastav. All rights reserved.
           </p>
-          <p className="text-sm text-muted-foreground flex items-center">
-            Made with brewed coffee <Coffee className="h-4 w-4 mx-1" /> in Prague
-          </p>
+          <div className="flex items-center space-x-2">
+            <a href="#" className="text-sm text-muted-foreground hover:text-primary">Privacy Policy</a>
+            <span className="text-muted-foreground">•</span>
+            <a href="#" className="text-sm text-muted-foreground hover:text-primary">Terms of Service</a>
+          </div>
         </div>
       </div>
     </footer>

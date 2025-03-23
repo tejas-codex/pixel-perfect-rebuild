@@ -70,7 +70,7 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-				display: ['SF Pro Display', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+				display: ['Manrope', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

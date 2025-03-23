@@ -6,6 +6,7 @@ import { ArrowUpRight } from "lucide-react";
 interface Project {
   title: string;
   category: string;
+  description: string;
   image: string;
   link: string;
 }
@@ -27,11 +28,12 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
               {project.category}
             </span>
             <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+            <p className="text-white/80 mb-3 text-sm line-clamp-3">{project.description}</p>
             <a 
               href={project.link} 
               className="inline-flex items-center text-white/90 hover:text-white text-sm font-medium"
             >
-              View Project <ArrowUpRight className="ml-1 h-3 w-3" />
+              View Case Study <ArrowUpRight className="ml-1 h-3 w-3" />
             </a>
           </div>
         </div>
@@ -69,39 +71,45 @@ const Projects = () => {
 
   const projects: Project[] = [
     {
-      title: "E-Commerce Redesign",
-      category: "UX/UI Design",
-      image: "https://images.unsplash.com/photo-1523540939399-141cbff6a8d7?ixlib=rb-4.0.3",
+      title: "Automated SaaS Billing System",
+      category: "Financial Operations",
+      description: "A comprehensive automation solution for SaaS billing, integrating multiple payment gateways and optimizing revenue recognition.",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3",
       link: "#"
     },
     {
-      title: "Financial Dashboard",
-      category: "Web Development",
+      title: "Power BI Reporting Dashboard",
+      category: "Data Analytics",
+      description: "Custom financial dashboard displaying real-time metrics, forecasting, and trend analysis for executive decision-making.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3",
       link: "#"
     },
     {
-      title: "Mobile Banking App",
-      category: "App Design",
-      image: "https://images.unsplash.com/photo-1567581935884-3349723552ca?ixlib=rb-4.0.3",
+      title: "Multi-Currency Reconciliation Tool",
+      category: "Financial Systems",
+      description: "Automated reconciliation system handling transactions across multiple currencies, banks, and payment processors.",
+      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3",
       link: "#"
     },
     {
-      title: "Brand Identity System",
-      category: "Branding",
-      image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3",
+      title: "KYC Compliance Framework",
+      category: "Banking Operations",
+      description: "Standardized framework for KYC verification, risk assessment, and regulatory compliance in fintech applications.",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3",
       link: "#"
     },
     {
-      title: "Social Media Platform",
-      category: "Web Development",
-      image: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3",
+      title: "Financial Process Automation",
+      category: "Workflow Optimization",
+      description: "End-to-end automation of financial workflows from invoice generation to payment reconciliation and reporting.",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3",
       link: "#"
     },
     {
-      title: "Healthcare Portal",
-      category: "UX Research & Design",
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3",
+      title: "GST Compliance System",
+      category: "Tax Management",
+      description: "Automated GST calculation, filing, and reconciliation system integrated with accounting software.",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3",
       link: "#"
     },
   ];
@@ -111,7 +119,7 @@ const Projects = () => {
       <div className="section-container">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
           <div>
-            <span className="reveal text-sm font-medium text-primary/60 mb-4 block">MY WORK</span>
+            <span className="reveal text-sm font-medium text-primary/60 mb-4 block">CASE STUDIES</span>
             <h2 className="reveal text-3xl md:text-4xl font-bold">Featured Projects</h2>
           </div>
           <div className="reveal reveal-delay-1 mt-4 md:mt-0">

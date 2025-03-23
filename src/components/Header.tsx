@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "./Button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, FileDown, Linkedin } from "lucide-react";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,14 +31,15 @@ const Header = () => {
           href="/" 
           className="text-xl font-display font-bold tracking-tight"
         >
-          Louis Nguyen
+          Tejas Shrivastav
         </a>
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <NavLinks />
           <Button variant="default" size="sm" hasArrow>
-            Let's Talk
+            <FileDown className="h-4 w-4 mr-1" />
+            Resume
           </Button>
         </nav>
         
@@ -64,7 +65,12 @@ const Header = () => {
             <NavLinks mobile onClose={() => setMobileMenuOpen(false)} />
           </div>
           <Button className="w-full mt-4" hasArrow>
-            Let's Talk
+            <FileDown className="h-4 w-4 mr-2" />
+            Download Resume
+          </Button>
+          <Button className="w-full mt-2" variant="outline">
+            <Linkedin className="h-4 w-4 mr-2" />
+            Connect on LinkedIn
           </Button>
         </div>
       </div>

@@ -1,6 +1,12 @@
 
 import React, { useEffect, useRef } from "react";
-import { Code, Briefcase, Lightbulb, Layout } from "lucide-react";
+import { 
+  ChartBar, 
+  FileSpreadsheet, 
+  Buildings, 
+  BarChart4, 
+  BadgeCheck 
+} from "lucide-react";
 
 interface ExperienceCardProps {
   title: string;
@@ -48,29 +54,30 @@ const Experience = () => {
     };
   }, []);
 
-  const experiences = [
+  // Updated experience items with your financial skills and tech stack
+  const financialSkills = [
     {
-      title: "Design Experience",
-      description: "Crafting user-centered interfaces that balance aesthetics with functionality.",
-      icon: <Layout className="h-6 w-6 text-primary" />,
+      title: "Financial Analysis",
+      description: "Expertise in GST, budgeting, reconciliation, and financial compliance.",
+      icon: <FileSpreadsheet className="h-6 w-6 text-primary" />,
       delay: 1
     },
     {
-      title: "Development Experience",
-      description: "Building performant, accessible, and responsive web applications.",
-      icon: <Code className="h-6 w-6 text-primary" />,
+      title: "SaaS Billing Systems",
+      description: "Implementation and management of automated billing processes and credit tracking.",
+      icon: <ChartBar className="h-6 w-6 text-primary" />,
       delay: 2
     },
     {
-      title: "Startup Experience",
-      description: "Working with teams to launch and scale innovative products.",
-      icon: <Briefcase className="h-6 w-6 text-primary" />,
+      title: "Banking Compliance",
+      description: "KYC procedures, regulatory compliance, and risk management frameworks.",
+      icon: <BadgeCheck className="h-6 w-6 text-primary" />,
       delay: 3
     },
     {
-      title: "Creative Problem Solving",
-      description: "Finding elegant solutions to complex design and technical challenges.",
-      icon: <Lightbulb className="h-6 w-6 text-primary" />,
+      title: "Data Visualization",
+      description: "Creating insightful dashboards and reports using Power BI and other tools.",
+      icon: <BarChart4 className="h-6 w-6 text-primary" />,
       delay: 4
     }
   ];
@@ -81,19 +88,62 @@ const Experience = () => {
         <div className="text-center mb-16">
           <h2 className="reveal text-3xl md:text-4xl font-bold mb-4">Experience & Expertise</h2>
           <p className="reveal reveal-delay-1 text-muted-foreground max-w-2xl mx-auto">
-            With over 8 years of experience, I've developed a diverse skill set across design and development.
+            Over 6 years of experience in financial operations, banking, and fintech sectors.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {experiences.map((exp, index) => (
+        
+        {/* Financial Skills Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {financialSkills.map((skill, index) => (
             <ExperienceCard
               key={index}
-              title={exp.title}
-              description={exp.description}
-              icon={exp.icon}
-              delay={exp.delay}
+              title={skill.title}
+              description={skill.description}
+              icon={skill.icon}
+              delay={skill.delay}
             />
           ))}
+        </div>
+        
+        {/* Work Experience Timeline */}
+        <div className="mt-16">
+          <h3 className="reveal text-2xl font-bold mb-10 text-center">Work History</h3>
+          
+          <div className="space-y-12">
+            {/* Testlify & HNR Tech */}
+            <div className="reveal grid grid-cols-1 md:grid-cols-4 gap-6 items-start">
+              <div className="md:text-right">
+                <span className="text-sm text-primary/60 font-medium">2019 - PRESENT</span>
+                <h4 className="text-xl font-bold mt-1">Testlify & HNR Tech</h4>
+                <p className="text-muted-foreground mt-1">Financial Operations Manager</p>
+              </div>
+              <div className="md:col-span-3">
+                <ul className="space-y-3 text-muted-foreground list-disc ml-5">
+                  <li>Implemented automated SaaS billing integration, reducing manual errors by 95%</li>
+                  <li>Developed credit tracking system for multi-currency transactions across 5 countries</li>
+                  <li>Streamlined payroll process, cutting processing time from 3 days to 4 hours</li>
+                  <li>Created Power BI dashboards for real-time financial insights and forecasting</li>
+                </ul>
+              </div>
+            </div>
+            
+            {/* YES Bank */}
+            <div className="reveal reveal-delay-2 grid grid-cols-1 md:grid-cols-4 gap-6 items-start">
+              <div className="md:text-right">
+                <span className="text-sm text-primary/60 font-medium">2017 - 2019</span>
+                <h4 className="text-xl font-bold mt-1">YES Bank</h4>
+                <p className="text-muted-foreground mt-1">KYC & Compliance Specialist</p>
+              </div>
+              <div className="md:col-span-3">
+                <ul className="space-y-3 text-muted-foreground list-disc ml-5">
+                  <li>Led KYC verification team, processing over 3,000 applications monthly</li>
+                  <li>Developed and maintained risk assessment models for regulatory compliance</li>
+                  <li>Automated reconciliation processes, improving accuracy by 40%</li>
+                  <li>Conducted staff training on compliance protocols and regulatory updates</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

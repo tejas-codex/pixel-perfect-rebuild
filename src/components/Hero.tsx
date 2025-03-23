@@ -1,6 +1,7 @@
 
 import React, { useEffect, useRef } from "react";
 import { Button } from "./Button";
+import { FileDown, Linkedin } from "lucide-react";
 
 const Hero = () => {
   const headingRef = useRef<HTMLHeadingElement>(null);
@@ -34,23 +35,25 @@ const Hero = () => {
         className="container mx-auto px-4 md:px-6 flex flex-col items-start py-12 md:py-24"
       >
         <span className="reveal text-sm md:text-base font-medium text-primary/60 mb-4">
-          DESIGNER & DEVELOPER
+          FINANCIAL OPERATIONS & ANALYTICS
         </span>
         <h1
           ref={headingRef}
           className="reveal text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight max-w-4xl text-balance mb-6"
         >
-          Creating Thoughtful Digital Experiences That Matter
+          Tejas Shrivastav
         </h1>
         <p className="reveal reveal-delay-1 text-lg md:text-xl text-muted-foreground max-w-2xl mb-10">
-          I'm a designer and developer passionate about creating beautiful, intuitive, and engaging digital experiences that solve real problems.
+          Driving efficiency with data & automation in financial operations, billing systems, and business analytics.
         </p>
         <div className="reveal reveal-delay-2 flex flex-col sm:flex-row gap-4 mt-2">
           <Button variant="default" size="lg" hasArrow>
-            View My Work
+            <FileDown className="h-5 w-5 mr-2" />
+            Download Resume
           </Button>
           <Button variant="outline" size="lg">
-            About Me
+            <Linkedin className="h-5 w-5 mr-2" />
+            Connect on LinkedIn
           </Button>
         </div>
       </div>
